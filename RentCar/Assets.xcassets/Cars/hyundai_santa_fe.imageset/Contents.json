@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hyundai_santa_fe.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

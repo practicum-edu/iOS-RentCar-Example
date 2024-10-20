@@ -1,0 +1,12 @@
+@Tutorials(name: "Туториалы") {
+    @Intro(title: "Вспомогательный туториал к уроку о мобильной разработке") {
+        Предлагаем попробовать себя в роли джуниор iOS разработчика
+    }
+    
+    @Chapter(name: "Добавляем кнопку избранного") {
+        Простая задачка: добавь кнопку!
+        @Image(source: LikeButtonTutorial.png, alt: "")
+        
+        @TutorialReference(tutorial: "doc:FavoriteButton")
+    }
+}
