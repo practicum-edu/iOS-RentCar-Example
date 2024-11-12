@@ -1,10 +1,3 @@
-//
-//  CarCard.swift
-//  RentCar
-//
-//
-
-import Foundation
 import SwiftUI
 
 struct CarCard: View {
@@ -26,7 +19,29 @@ struct CarCard: View {
                 
                 Spacer()
                 
-                // Кнопка изобранного
+                Button(
+                    action: {
+                        offer.isFavorite.toggle()
+                    },
+                    label: {
+                        if offer.isFavorite {
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundStyle(.red)
+                                .padding(8)
+                        }
+                        else {
+                            Image(systemName: "heart")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundStyle(.secondary)
+                                .padding(8)
+                        }
+                    }
+                )
             }
             
             HStack(alignment: .bottom) {
@@ -68,18 +83,4 @@ struct CarCard: View {
                 .fill(.ultraThinMaterial)
         )
     }
-}
-
-#Preview {
-    CarCard(
-        offer: Binding.constant(
-            RentCar(car: Car(name: "Toyota Camry",
-                             type: "Легковой",
-                             image: "toyota_camry",
-                             specifications: CarSpecification(gas: "60 л", drive: "Автомат", capacity: "5")),
-                    price: "3000 руб/день")
-        ),
-        onRent: { _ in }
-    )
-    .padding(20)
 }

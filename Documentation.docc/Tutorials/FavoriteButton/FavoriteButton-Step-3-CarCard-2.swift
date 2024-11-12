@@ -7,16 +7,14 @@ struct CarCard: View {
     var body: some View {
         VStack(spacing: 16) {
             HStack(spacing: 4) {
-                VStack(alignment: .leading, spacing: 4) { ... }
-                
-                Spacer()
+                ...
                 
                 Button(
                     action: {
-                        // действие
+                        // действие: добавить/удалить из избранного
                     },
                     label: {
-                        // Изображение сердца
+                        // Изображение сердца: заполненное или пустое
                     }
                 )
             }

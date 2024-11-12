@@ -9,12 +9,7 @@ struct CarCard: View {
             HStack(spacing: 4) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(offer.car.name)
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundStyle(Color.primary)
-                    
                     Text(offer.car.type)
-                        .font(.system(size: 14))
-                        .foregroundStyle(Color.secondary)
                 }
                 
                 Spacer()

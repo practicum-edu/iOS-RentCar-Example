@@ -24,12 +24,7 @@ struct CarCard: View {
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 16) {
-                    Button(
-                        action: { onRent(offer) },
-                        label: {
-                            Text("Арендовать")
-                        }
-                    )
+                    Button(action: { onRent(offer) }, label: { Text("Арендовать") })
                 }
             }
         }
